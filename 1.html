@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 1</title>
+</head>
+<body style="margin: 2rem 5rem 2rem 5rem">
+	<h2>Inisialisasi</h2>
+	<p>Burung lovebird : 6.969</p>
+	<p>Setiap 21 hari menetaskan satu lovebird baru</p>
+	<p>11,1% dari lovebird mati sebelum melahirkan</p>
+	
+	<h2>Pertanyaan</h2>
+	<p>Buatlah sebuah program untuk menghitung dan mengetahui jumlah lovebird setelah 441 hari?</p>
+
+	<!-- Penyelesaian -->
+	<h2>Penyelesaian</h2>
+	<script type="text/javascript">
+		var jumlahLoveBird=6969;
+		var temp=0, jumlahLoveBirdHidup=0;
+		var index=0;
+		for (var i = 0; i < 441; i=i+21) {
+			temp = Math.round(0.111*jumlahLoveBird);
+			jumlahLoveBirdHidup=jumlahLoveBirdHidup+temp;
+			index++;
+		}
+		document.write("Jumlah lovebird yang masih hidup setelah 441 hari: ",jumlahLoveBirdHidup,"\n");
+	</script>
+</body>
+</html>

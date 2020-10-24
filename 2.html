@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 1</title>
+</head>
+<body style="margin: 2rem 5rem 2rem 5rem">
+	<script>
+		function cetak_gambar(panjang){
+			if(panjang%2==1){
+				var i,j,y;
+
+	            for(i=panjang;i>panjang/2;i--){
+	                for(j=1;j<=i-1;j++){
+	                	document.write("&nbsp&nbsp&nbsp");
+	                }
+		            for(y=1;y<=panjang-i+1;y++){
+		            	if(i==Math.round(panjang/2))
+		            		document.write(" * ");
+		                else if(y==1 || y==panjang-i+1)
+		                	document.write(" * ");
+		                else
+		                	document.write("&nbsp&nbsp&nbsp");
+		            }
+		           	for(l=1;l<=panjang-i;l++){
+		           		if(i==Math.round(panjang/2))
+		           			document.write(" * ");
+		                else if(l==panjang-i)
+		                	document.write(" * ");
+			            else
+			               	document.write("&nbsp&nbsp&nbsp");
+		            }
+	                document.write("<br>");
+	            }
+	            for(i=Math.round(panjang/2);i<panjang;i++){
+		            for(j=1;j<=i;j++){
+		                document.write("&nbsp&nbsp&nbsp");
+		            }
+		            for(y=1;y<=panjang-i;y++){
+		            	if(y==1 || y==panjang-i)
+		                	document.write(" * ");
+		                else
+		                	document.write("&nbsp&nbsp&nbsp");
+		            }
+		            for(l=1;l<panjang-i;l++){
+		            	if(l==panjang-i-1)
+			                	document.write(" * ");
+			                else
+			                	document.write("&nbsp&nbsp&nbsp");
+		            }
+		            document.write(" <br> ");
+	            }
+			}else{
+				document.write("Panjang tidak boleh genap")
+			}
+		}
+		cetak_gambar(9);
+	</script>
+</body>
+</html>
